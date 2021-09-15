@@ -25,13 +25,14 @@ public class ExecutorScedu {
         src.subscribe(e -> compute());
         src.subscribe(e -> compute());
         src.subscribe(e -> compute());
-        src.subscribe(e -> compute());
+
 
     }
 
     public static void compute() throws InterruptedException {
 
         Thread.sleep(1000);
+        //boolean e;
         System.out.println("Computation Done By : " + Thread.currentThread().getName());
     }
 }

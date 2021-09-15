@@ -5,7 +5,7 @@ public class IoScheduler {
     public static void main(String[] args) throws InterruptedException {
 
         Observable<String> src = Observable.just("Pasta", "Pizza", "Fries", "Curry", "Chow mein")
-                .subscribeOn(Schedulers.io());
+                .subscribeOn(Schedulers.single());
 
         src.subscribe(e -> ioOeration());
 

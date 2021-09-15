@@ -9,10 +9,10 @@ public class SubscribeOn {
                 .map(e -> e.toUpperCase())
                 .doOnNext(e -> System.out.println(Thread.currentThread().getName()))
                 .subscribeOn(Schedulers.newThread())
-              //  .observeOn(Schedulers.newThread())
+                .subscribeOn(Schedulers.newThread())
                 .doOnNext(e -> System.out.println(Thread.currentThread().getName()))
                 .filter(e -> e.startsWith("P"))
-              //  .observeOn(Schedulers.io())
+                .subscribeOn(Schedulers.io())
                 .subscribe(e -> print(e));
 
 
